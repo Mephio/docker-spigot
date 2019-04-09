@@ -2,7 +2,7 @@
 
 This repository contains a `Dockerfile` that can run a Spigot server. It is intended to be minimal as possible, while still allowing a good amount of configuration.
 
-Automatic builds are provided on Docker Hub as `academusapp/spigot`, but they might not always be up-to-date wiith the latest Spigot version so we recommend building it yourself for a specific version of Spigot.
+Automatic builds are provided on Docker Hub as [`academusapp/spigot`](https://hub.docker.com/r/academusapp/spigot), but they might not always be up-to-date wiith the latest Spigot version so we recommend building it yourself for a specific version of Spigot.
 
 A sample `docker-compose.yml` is included for reference.
 
