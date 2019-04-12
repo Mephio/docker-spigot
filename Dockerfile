@@ -10,7 +10,8 @@ RUN wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastS
 RUN java -Xmx1024M -jar BuildTools.jar --rev ${SPIGOT_VERSION}
 
 # Actual Spigot image - runs Spigot
-FROM java:openjdk-8-jre-alpine
+# To increase compatibility, you can change the base image to openjdk:8 (see README)
+FROM java:openjdk-8-jre-alpine 
 WORKDIR /spigot
 
 ENV SPIGOT_JAVA_FLAGS="-Xmx1024M"
