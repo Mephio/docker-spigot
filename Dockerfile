@@ -11,10 +11,10 @@ RUN java -Xmx1024M -jar BuildTools.jar --rev ${SPIGOT_VERSION}
 
 # Actual Spigot image - runs Spigot
 # To increase compatibility, you can change the base image to openjdk:8 (see README)
-FROM java:openjdk-8-jre-alpine 
+FROM openjdk:8 
 WORKDIR /spigot
 
-ENV SPIGOT_JAVA_FLAGS="-Xmx1024M"
+ENV SPIGOT_JAVA_FLAGS="-Xmx2048M"
 
 COPY --from=builder /build/spigot*.jar /usr/bin/spigot.jar
 
